@@ -53,3 +53,14 @@ vim.api.nvim_set_keymap("c", "<M-b>", "<S-Left>", { noremap = true })
 vim.api.nvim_set_keymap("c", "<M-f>", "<S-Right>", { noremap = true })
 vim.api.nvim_set_keymap("c", "<C-d>", "<C-Del>", { noremap = true })
 vim.api.nvim_set_keymap("c", "<M-bs>", "<C-W>", { noremap = true })
+
+-- Insert mode remaps
+-- " Mimic Emacs Line Editing in Insert Mode Only
+vim.api.nvim_set_keymap("i", "<C-a>", "<Home>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-b>", "<Left>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-e>", "<End>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-f>", "<Right>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<M-b>", "<C-Left>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<M-f>", "<C-Right>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-d>", "<C-Del>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<M-bs>", "<C-W>", { noremap = true })
