@@ -6,5 +6,5 @@ return {
     { "Mofiqul/dracula.nvim",        priority = 1000 },
     { "Mofiqul/vscode.nvim",         priority = 1000 },
     { "tpope/vim-vividchalk",        priority = 1000 },
-    { "NLKNguyen/papercolor-theme",  priority = 1000 }
+    { "sainnhe/gruvbox-material",    priority = 1000 }
 }
