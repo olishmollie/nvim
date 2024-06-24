@@ -58,5 +58,38 @@ return {
             theme = "gruvbox-material"
         },
         config = true
+    },
+    {
+        'nvimdev/dashboard-nvim',
+        lazy = false,
+        event = 'VimEnter',
+        opts = function()
+            local logo = [[
+███╗   ███╗███████╗███╗   ███╗ █████╗  ██████╗███████╗
+████╗ ████║██╔════╝████╗ ████║██╔══██╗██╔════╝██╔════╝
+██╔████╔██║█████╗  ██╔████╔██║███████║██║     ███████╗
+██║╚██╔╝██║██╔══╝  ██║╚██╔╝██║██╔══██║██║     ╚════██║
+██║ ╚═╝ ██║███████╗██║ ╚═╝ ██║██║  ██║╚██████╗███████║
+╚═╝     ╚═╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚══════╝
+            ]]
+
+            logo = string.rep("\n", 2) .. logo .. "\n\n"
+
+            local opts = {
+                theme = "doom",
+                hide = {
+                    statusline = false
+                },
+                config = {
+                    header = vim.split(logo, "\n"),
+                },
+            }
+
+            return opts
+        end,
+        dependencies = {
+            { "nvim-tree/nvim-web-devicons" },
+            { "folke/lazy.nvim", }
+        },
     }
 }
