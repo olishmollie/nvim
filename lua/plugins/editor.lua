@@ -1,7 +1,7 @@
 return {
     {
-        'echasnovski/mini.pairs',
-        version = '*',
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
         config = true
     },
     {
@@ -14,11 +14,6 @@ return {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
         opts = {
-            indent = {
-                char = "│",
-                tab_char = "│",
-            },
-            scope = { show_start = false, show_end = false },
             exclude = {
                 filetypes = {
                     "help",
@@ -33,5 +28,10 @@ return {
                 },
             },
         }
+    },
+    {
+        'numToStr/Comment.nvim',
+        config = true
     }
+
 }
