@@ -30,8 +30,12 @@ return {
         }
     },
     {
-        'numToStr/Comment.nvim',
-        config = true
-    }
-
+        'echasnovski/mini.comment',
+        version = '*',
+        opts = {
+            options = {
+                ignore_blank_line = true
+            }
+        }
+    },
 }
