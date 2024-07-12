@@ -73,7 +73,7 @@ return {
 ╚═╝     ╚═╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚══════╝
             ]]
 
-            logo = string.rep("\n", 2) .. logo .. "\n\n"
+            logo = string.rep("\n", 10) .. logo .. "\n\n"
 
             local opts = {
                 theme = "doom",
@@ -82,6 +82,38 @@ return {
                 },
                 config = {
                     header = vim.split(logo, "\n"),
+                    center = {
+                        {
+                            action = "lua vim.cmd('Telescope find_files')",
+                            desc = " Find Files",
+                            icon = " ",
+                            key = "f"
+                        },
+                        {
+                            action = "lua vim.cmd('ene | startinsert')",
+                            desc = " New File",
+                            icon = " ",
+                            key = "n"
+                        },
+                        {
+                            action = "lua vim.cmd('Lazy')",
+                            desc = " Plugins",
+                            icon = " ",
+                            key = "p"
+                        },
+                        {
+                            action = "lua vim.cmd('e ' .. vim.env.HOME .. '/.config/nvim/init.lua')",
+                            desc = " Config",
+                            icon = " ",
+                            key = "c"
+                        },
+                        {
+                            action = "lua vim.cmd('qa')",
+                            desc = " Quit",
+                            icon = " ",
+                            key = "q"
+                        }
+                    }
                 },
             }
 
