@@ -1,21 +1,18 @@
 local wk = require("which-key")
 
-local find_files = function()
-    local path = vim.loop.cwd() .. "/.git"
-    local ok, _ = vim.loop.fs_stat(path)
-    if ok then
-        vim.cmd [[Telescope git_files]]
-    else
-        vim.cmd [[Telescope find_files]]
-    end
-end
-
 wk.register({
+    b = {
+        name = "Buffers",
+        d = { "<cmd>bdelete<cr>", "Delete" },
+        n = { "<cmd>bnext<cr>", "Next" },
+        p = { "<cmd>bprev<cr>", "Previous" },
+    },
     e = { "<cmd>Neotree toggle<cr>", "NeoTree" },
     f = {
         name = "Files",
-        f = { find_files, "Find files" },
-        g = { "<cmd>Telescope live_grep<cr>", "Grep files" }
+        f = { "<cmd>Telescope find_files<cr>", "Find files" },
+        g = { "<cmd>Telescope live_grep<cr>", "Grep files" },
+        p = { "<cmd>Telescope git_files<cr>", "Git files" }
     },
     g = {
         function()
