@@ -34,7 +34,6 @@ wk.register({
     t = { "<cmd>ToggleTerm<cr>", "Terminal" }
 }, { prefix = "<leader>" })
 
-
 -- LSP remaps
 vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", { noremap = true })
