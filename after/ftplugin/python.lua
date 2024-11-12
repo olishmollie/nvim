@@ -1,4 +1,6 @@
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    pattern = { "*" },
-    command = [[!black %]]
-})
+-- TODO: figure out how to automatically format python files. The
+-- below is really buggy.
+-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+--     pattern = { "*" },
+--     command = [[!black %]]
+-- })
