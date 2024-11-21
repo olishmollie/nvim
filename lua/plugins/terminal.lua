@@ -5,7 +5,6 @@ return {
         opts = {
             open_mapping = [[<c-\>]],
             direction = "float",
-            shell = "$SHELL --login"
         }
     },
 }
