@@ -31,7 +31,8 @@ wk.register({
         i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Implementation" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename symbol" }
     },
-    t = { "<cmd>ToggleTerm<cr>", "Terminal" }
+    t = { "<cmd>ToggleTerm<cr>", "Terminal" },
+    q = { "<cmd>qa<cr>", "Quit" }
 }, { prefix = "<leader>" })
 
 -- LSP remaps
