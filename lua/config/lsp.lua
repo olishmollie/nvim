@@ -23,7 +23,14 @@ lspconfig.clangd.setup {
     capabilities = capabilities
 }
 lspconfig.rust_analyzer.setup {
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        ["rust-analyzer"] = {
+            check = {
+                command = "clippy",
+            },
+        },
+    },
 }
 
 lspconfig.pyright.setup {
