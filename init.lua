@@ -14,6 +14,8 @@ vim.opt.number = true;
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 
+vim.api.nvim_set_option("clipboard", "unnamed")
+
 -- Bootstrap plugin manager.
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
