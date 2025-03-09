@@ -19,9 +19,11 @@ lspconfig.lua_ls.setup {
         }
     }
 }
+
 lspconfig.clangd.setup {
-    capabilities = capabilities
+    capabilities = capabilities,
 }
+
 lspconfig.rust_analyzer.setup {
     capabilities = capabilities,
     settings = {

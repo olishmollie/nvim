@@ -29,7 +29,8 @@ wk.register({
         d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Definition" },
         D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Declaration" },
         i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Implementation" },
-        r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename symbol" }
+        r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename symbol" },
+        gr = { "<cmd>Telescope lsp_references<cr>", "Find references" },
     },
     t = { "<cmd>ToggleTerm<cr>", "Terminal" },
     q = { "<cmd>qa<cr>", "Quit" }
