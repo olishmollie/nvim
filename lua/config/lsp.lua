@@ -20,10 +20,6 @@ lspconfig.lua_ls.setup {
     }
 }
 
-lspconfig.clangd.setup {
-    capabilities = capabilities,
-}
-
 lspconfig.rust_analyzer.setup {
     capabilities = capabilities,
     settings = {
@@ -33,8 +29,4 @@ lspconfig.rust_analyzer.setup {
             },
         },
     },
-}
-
-lspconfig.pyright.setup {
-    capabilities = capabilities
 }
