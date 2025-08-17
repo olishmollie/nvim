@@ -36,4 +36,12 @@ return {
             },
         }
     },
+    {
+        "vhyrro/luarocks.nvim",
+        priority = 1000,
+        opts = {
+            rocks = { "lua-toml" },
+            -- luarocks_build_args = { "--with-lua=/my/path" }, -- Optional extra build arguments
+        },
+    },
 }
