@@ -1,40 +1,38 @@
 local wk = require("which-key")
-
-wk.register({
-    b = {
-        name = "Buffers",
-        d = { "<cmd>bdelete<cr>", "Delete" },
-        n = { "<cmd>bnext<cr>", "Next" },
-        p = { "<cmd>bprev<cr>", "Previous" },
-    },
-    e = { "<cmd>Neotree toggle<cr>", "NeoTree" },
-    f = {
-        name = "Files",
-        f = { "<cmd>Telescope find_files<cr>", "Find files" },
-        g = { "<cmd>Telescope live_grep<cr>", "Grep files" },
-        p = { "<cmd>Telescope git_files<cr>", "Git files" }
-    },
-    g = {
+wk.add({
+    mode = "n",
+    { "<leader>b",  group = "Buffers" },
+    { "<leader>bd", "<cmd>bdelete<cr>",              desc = "Delete" },
+    { "<leader>bn", "<cmd>bnext<cr>",                desc = "Next" },
+    { "<leader>bp", "<cmd>bprev<cr>",                desc = "Prev" },
+    { "<leader>e",  "<cmd>Neotree toggle<cr>",       desc = "Neotree" },
+    { "<leader>f",  group = "Files" },
+    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+    { "<leader>fg", "<cmd>Telescope live_grep<cr>",  desc = "Grep files" },
+    { "<leader>fp", "<cmd>Telescope git_files<cr>",  desc = "Git files" },
+    {
+        "<leader>g",
         function()
             local term = require("config.terminal")
             term.lazygit_toggle()
         end,
-        "LazyGit"
+        desc = "LazyGit"
     },
-    l = {
-        name = "Lsp",
-        j = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next diagnostic" },
-        k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Previous diagnostic" },
-        f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format buffer" },
-        d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Definition" },
-        D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Declaration" },
-        i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Implementation" },
-        r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename symbol" },
-        gr = { "<cmd>Telescope lsp_references<cr>", "Find references" },
-    },
-    t = { "<cmd>ToggleTerm<cr>", "Terminal" },
-    q = { "<cmd>qa<cr>", "Quit" }
-}, { prefix = "<leader>" })
+    {
+        mode = { "n", "v" },
+        { "<leader>l",   group = "Lsp" },
+        { "<leader>lj",  "<cmd>lua vim.diagnostic.goto_next()<cr>",   desc = "Next diagnostic" },
+        { "<leader>lk",  "<cmd>lua vim.diagnostic.goto_prev()<cr>",   "Previous diagnostic" },
+        { "<leader>lf",  "<cmd>lua vim.lsp.buf.format()<cr>",         desc = "Format buffer" },
+        { "<leader>ld",  "<cmd>lua vim.lsp.buf.definition()<cr>",     desc = "Definition" },
+        { "<leader>lD",  "<cmd>lua vim.lsp.buf.declaration()<cr>",    desc = "Declaration" },
+        { "<leader>li",  "<cmd>lua vim.lsp.buf.implementation()<cr>", desc = "Implementation" },
+        { "<leader>lr",  "<cmd>lua vim.lsp.buf.rename()<cr>",         desc = "Rename symbol" },
+        { "<leader>lgr", "<cmd>Telescope lsp_references<cr>",         desc = "Find references" },
+        { "t",           "<cmd>ToggleTerm<cr>",                       desc = "Terminal" },
+        { "q",           "<cmd>qa<cr>",                               desc = "Quit" }
+    }
+})
 
 -- LSP remaps
 vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", { noremap = true })
