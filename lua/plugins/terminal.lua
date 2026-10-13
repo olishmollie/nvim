@@ -5,7 +5,7 @@ return {
         opts = {
             open_mapping = [[<c-\>]],
             direction = "float",
-            shell = "/bin/bash"
+            shell = "/bin/bash --login"
         }
     },
 }
