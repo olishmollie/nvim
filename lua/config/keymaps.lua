@@ -29,8 +29,6 @@ wk.add({
         { "<leader>li",  "<cmd>lua vim.lsp.buf.implementation()<cr>", desc = "Implementation" },
         { "<leader>lr",  "<cmd>lua vim.lsp.buf.rename()<cr>",         desc = "Rename symbol" },
         { "<leader>lgr", "<cmd>Telescope lsp_references<cr>",         desc = "Find references" },
-        { "t",           "<cmd>ToggleTerm<cr>",                       desc = "Terminal" },
-        { "q",           "<cmd>qa<cr>",                               desc = "Quit" }
     }
 })
 
